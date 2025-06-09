@@ -7,12 +7,14 @@ function Main() {
 
   const [ingredients, setIngredients] = React.useState([]);
   const [recipe, setRecipe] = React.useState("")
+  const [loading, setLoading] = React.useState(false);
 
-  // const ingredientsListItems = ingredients.map(ingredient => (<li key={ingredient}> {ingredient} </li>))
 
   async function getRecipe() {
+    setLoading(true);
     const recipeMarkdown = await getRecipeFromMistral(ingredients)
     setRecipe(recipeMarkdown)
+    setLoading(false);
   }
 
   function addIngredient(formData) {
@@ -40,7 +42,7 @@ function Main() {
         getRecipe={getRecipe}
       />
 
-      {recipe && <Recipe recipe={recipe} />}
+      <Recipe  loading={loading} recipe={recipe}/>
 
     </main>
   )
