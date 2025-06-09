@@ -1,12 +1,66 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ChefGPT 🍽️ – AI-Powered Recipe Generator
 
-Currently, two official plugins are available:
+ChefGPT is a simple React application that allows users to generate recipes based on ingredients they have on hand. It uses the Hugging Face API to fetch AI-generated recipes, making it a fun and educational tool for exploring food and React development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Add ingredients one by one
+- ✅ Dynamic ingredient list display
+- ✅ "Get Recipe" button appears after 4+ ingredients
+- ✅ Fetches recipe from Hugging Face API
+- ✅ Displays the full recipe with ingredients and instructions
+
+---
+
+## 🧠 Technologies Used
+
+- **React** – Frontend framework
+- **Hugging Face Inference API** – For AI-generated recipe content
+- **JavaScript (ES6+)**
+- **CSS/Styling** – Basic styling for UI layout
+
+---
+
+## 🧪 Sample Working Flow
+
+1. User types an ingredient into the input field.
+2. Clicks **"Add Ingredient"** to include it in the list.
+3. The ingredient is added to a visible list on the screen.
+4. Once **4 or more ingredients** are added, the **"Get Recipe"** button becomes active.
+5. Clicking **"Get Recipe"** sends a request to the Hugging Face API.
+6. A complete AI-generated recipe is returned and displayed on the page.
+
+---
+
+## 📦 Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/chef-gpt.git
+   cd chef-gpt
+2. Install dependencies:
+  ```
+  npm install
+  ```
+
+3. Add your Hugging Face API key to a .env file:
+  ```env
+REACT_APP_HF_API_KEY=your_api_key_here
+  ```
+4. Start the development server:
+  ```bash
+  npm run dev
+  ```
+## What I Learned
+State management in React using useState
+
+Conditional rendering (e.g., enabling/disabling the "Get Recipe" button)
+
+Handling form events and user input
+
+Fetching data from external APIs (Hugging Face)
+
+Component-based UI design
