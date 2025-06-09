@@ -1,9 +1,12 @@
+import Markdown from "react-markdown"
 
-import React from 'react'
 
 const Recipe = (props) => {
   return (
-    <section>{props.recipe}</section>
+  <div  className="suggested-recipe-container">
+    <Markdown>{props.recipe}</Markdown>
+  </div>
+    
   )
 }
 

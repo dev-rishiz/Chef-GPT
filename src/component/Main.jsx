@@ -18,7 +18,7 @@ function Main() {
   function addIngredient(formData) {
     const newIngredient = formData.get("ingredient");
 
-    if (!ingredients.includes(newIngredient)) {
+    if (newIngredient.length >3 && !ingredients.includes(newIngredient)) {
       setIngredients(prev => [...prev, newIngredient]);
     }
   }
